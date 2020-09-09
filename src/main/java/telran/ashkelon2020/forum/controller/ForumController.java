@@ -28,7 +28,6 @@ public class ForumController {
 	ForumService forumService;
 
 	@PostMapping("/post/{author}")
-	@PreAuthorize("#author==authentication.name") // only author can execute this method
 	public PostResponseDto addPost(@PathVariable String author, @RequestBody PostDto postDto) {
 		return forumService.addPost(author, postDto);
 	}
@@ -54,7 +53,6 @@ public class ForumController {
 	}
 	
 	@PutMapping("/post/{id}/comment/{author}")
-	@PreAuthorize("#author==authentication.name") // only author can execute this method
 	public PostResponseDto addCommentToPost(@PathVariable String id, @PathVariable String author,
 			@RequestBody MessageDto messageDto) {
 		return forumService.addCommentToPost(id, author, messageDto);

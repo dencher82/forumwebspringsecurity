@@ -1,12 +1,12 @@
 package telran.ashkelon2020.accounting.security.service;
 
-import java.time.LocalDateTime;
+//import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import telran.ashkelon2020.accounting.dao.UserRepositoryMongoDB;
-import telran.ashkelon2020.accounting.model.User;
+//import telran.ashkelon2020.accounting.model.User;
 import telran.ashkelon2020.forum.dao.ForumRepositoryMongoDB;
 import telran.ashkelon2020.forum.model.Post;
 
@@ -25,10 +25,10 @@ public class CustomWebSecurityService {
 																	// if post exists or not
 	}
 	
-	public boolean checkExpDate(String login) {
-		User user = userRepository.findById(login).orElse(null);
-		return user == null ? true : user.getExpDate().isAfter(LocalDateTime.now());
-		
-	}
+//	public boolean checkExpDate(String login) {
+//		User user = userRepository.findById(login).orElse(null);
+//		return user == null ? true : user.getExpDate().isAfter(LocalDateTime.now());
+//		
+//	}
 
 }

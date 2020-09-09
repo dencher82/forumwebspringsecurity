@@ -1,22 +1,22 @@
 /account,,,,
 Endpoints,Method,Authentication,Authorization,
-/register,POST,no,no,
-/login,POST,yes,"expDate, has roles",expDate
-/user/{login},PUT,yes,"expDate, has roles, validate user",expDate
-/user/{login},DELETE,yes,validate user,
-/user/{login}/role/{role},PUT,yes,validate Administrator,
-/user/{login}/role/{role},DELETE,yes,validate Administrator,
-/password,PUT,yes,no,
+/register,POST,no,no, +
+/login,POST,yes,"expDate, has roles", +
+/user/{login},PUT,yes,"expDate, has roles, validate user", +
+/user/{login},DELETE,yes,validate user, +
+/user/{login}/role/{role},PUT,yes,validate Administrator, +
+/user/{login}/role/{role},DELETE,yes,validate Administrator, +
+/password,PUT,yes,no, +
 ,,,,
 /forum,,,,
-/post/{author},POST,yes,"expDate, has roles, validate author",expDate
-/post/{id},GET,no,no,
+/post/{author},POST,yes,"expDate, has roles, validate author", +
+/post/{id},GET,no,no, +
 /post/{id},DELETE,yes,"expDate, has roles, (validate author or Moderator)",expDate
 /post/{id},PUT,yes,"expDate, has roles, (validate author or Moderator)",expDate
 /post/{id}/like,PUT,yes,"expDate, has roles",expDate
 /post/{id}/comment/{author},PUT,yes,"expDate, has roles, validate author",expDate
-/posts/author/{author},GET,no,no,
-/posts/tags,POST,no,no,
-/posts/period,POST,no,no,
-/post/{id}/comments,GET,no,no,
-/post/{id}/author/{author}/comments,GET,no,no,
+/posts/author/{author},GET,no,no, +
+/posts/tags,POST,no,no, +
+/posts/period,POST,no,no, +
+/post/{id}/comments,GET,no,no, +
+/post/{id}/author/{author}/comments,GET,no,no, +
